@@ -12,7 +12,7 @@ iOS version >= 8.0
 `Instabug` version >= 6.2
 
 ## Example
-Make sure you import it with `import Instabug_XCGLogger`
+Make sure you import our destination first: `import Instabug_XCGLogger`
 
 ```
 let log = XCGLogger.default
