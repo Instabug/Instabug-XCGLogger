@@ -38,8 +38,6 @@ open class InstabugLogDestination: BaseDestination {
             Instabug.logVerbose(message)
         case .warning:
             Instabug.logWarn(message)
-        default:
-            Instabug.ibgLog(message)
         }
     }
 }

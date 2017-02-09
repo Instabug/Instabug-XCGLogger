@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
   s.author           = { "Instabug" => "contactus@instabug.com" }
   s.source           = { :git => "https://github.com/Instabug/Instabug-XCGLogger.git", :tag => "#{s.version}" }
   s.platform         = :ios, '8.0'
-  s.source_files = 'Instabug-XCGLogger'
+  s.source_files     = 'Instabug-XCGLogger'
+  s.requires_arc     = true
   s.dependency 'Instabug', '>= 6.2'
   s.dependency 'XCGLogger'
 end
