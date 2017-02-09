@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Instabug-XCGLogger"
-  s.version          = "1.0"
+  s.version          = "1.0.1"
   s.summary          = "Instabug destination for XCGLogger"
   s.homepage         = "http://instabug.com"
   s.license          = {
