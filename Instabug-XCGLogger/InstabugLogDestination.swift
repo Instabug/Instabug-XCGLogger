@@ -20,24 +20,24 @@ open class InstabugLogDestination: BaseDestination {
         if self.shouldExclude(logDetails: &logDetails, message: &message) {
             return
         }
-        
+
         self.applyFormatters(logDetails: &logDetails, message: &message)
 
         switch logDetails.level {
-        case .debug:
-            Instabug.logDebug(message)
-        case .error:
-            Instabug.logError(message)
         case .info:
-            Instabug.logInfo(message)
-        case .none:
-            Instabug.ibgLog(message)
-        case .severe:
-            Instabug.logError(message)
-        case .verbose:
-            Instabug.logVerbose(message)
+            IBGLog.logInfo(message)
+        case .error:
+            IBGLog.logError(message)
         case .warning:
-            Instabug.logWarn(message)
+            IBGLog.logWarn(message)
+        case .debug:
+            IBGLog.logDebug(message)
+        case .verbose:
+            IBGLog.logVerbose(message)
+        case .none:
+            IBGLog.log(message)
+        case .severe:
+            IBGLog.logError(message)
         }
     }
 }
