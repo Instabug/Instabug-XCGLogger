@@ -12,7 +12,7 @@ Add pod `Instabug-XCGLogger` to your `podfile`
 
 iOS version >= 8.0
 
-`Instabug` version >= 6.2
+`Instabug` version >= 9.1
 
 ## Example
 Make sure you import our destination first: `import Instabug_XCGLogger`

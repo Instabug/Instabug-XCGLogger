@@ -15,29 +15,29 @@ open class InstabugLogDestination: BaseDestination {
     open override func output(logDetails: LogDetails, message: String) {
         var logDetails = logDetails
         var message = message
-        
+
         // Apply filters, if any indicate we should drop the message, we abort before doing the actual logging
         if self.shouldExclude(logDetails: &logDetails, message: &message) {
             return
         }
-        
+
         self.applyFormatters(logDetails: &logDetails, message: &message)
 
         switch logDetails.level {
         case .debug:
-            Instabug.logDebug(message)
+            IBGLog.logDebug(message)
         case .error:
-            Instabug.logError(message)
+            IBGLog.logError(message)
         case .info:
-            Instabug.logInfo(message)
-        case .none:
-            Instabug.ibgLog(message)
+            IBGLog.logInfo(message)
         case .severe:
-            Instabug.logError(message)
+            IBGLog.logError(message)
         case .verbose:
-            Instabug.logVerbose(message)
+            IBGLog.logVerbose(message)
         case .warning:
-            Instabug.logWarn(message)
+            IBGLog.logWarn(message)
+        default:
+            return
         }
     }
 }

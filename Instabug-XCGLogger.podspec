@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Instabug-XCGLogger"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "Instabug destination for XCGLogger"
   s.homepage         = "http://instabug.com"
   s.license          = {
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                 Copyright (C) 2014 Instabug
                 Permission is hereby granted to use this framework as is, modification are not allowed.
                 All rights reserved.
-        
+
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '8.0'
   s.source_files     = 'Instabug-XCGLogger'
   s.requires_arc     = true
-  s.dependency 'Instabug', '>= 6.2'
+  s.dependency 'Instabug', '>= 9.1'
   s.dependency 'XCGLogger'
 end
