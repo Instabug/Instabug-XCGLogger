@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Instabug-XCGLogger"
-  s.version          = "1.0.1"
+  s.version          = "1.2.0"
   s.summary          = "Instabug destination for XCGLogger"
   s.homepage         = "http://instabug.com"
   s.license          = {
@@ -21,9 +21,9 @@ Pod::Spec.new do |s|
     }
   s.author           = { "Instabug" => "contactus@instabug.com" }
   s.source           = { :git => "https://github.com/Instabug/Instabug-XCGLogger.git", :tag => "#{s.version}" }
-  s.platform         = :ios, '8.0'
+  s.platform         = :ios, '10.0'
   s.source_files     = 'Instabug-XCGLogger'
   s.requires_arc     = true
-  s.dependency 'Instabug', '>= 6.2'
-  s.dependency 'XCGLogger'
+  s.dependency 'Instabug', '>= 8.0'
+  s.dependency 'XCGLogger', '>= 7.0.0'
 end
