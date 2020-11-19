@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '10.0'
   s.source_files     = 'Instabug-XCGLogger'
   s.requires_arc     = true
-  s.dependency 'Instabug', '>= 8.0'
+  s.dependency 'Instabug', '>= 10.0.3'
   s.dependency 'XCGLogger', '>= 7.0.0'
 end
