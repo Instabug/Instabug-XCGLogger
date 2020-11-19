@@ -24,20 +24,26 @@ open class InstabugLogDestination: BaseDestination {
         self.applyFormatters(logDetails: &logDetails, message: &message)
 
         switch logDetails.level {
-        case .debug:
-            Instabug.logDebug(message)
-        case .error:
-            Instabug.logError(message)
-        case .info:
-            Instabug.logInfo(message)
         case .none:
-            Instabug.ibgLog(message)
-        case .severe:
-            Instabug.logError(message)
+            IBGLog.log(message)
         case .verbose:
-            Instabug.logVerbose(message)
+            IBGLog.logVerbose(message)
+        case .debug:
+            IBGLog.logDebug(message)
+        case .info:
+            IBGLog.logInfo(message)
+        case .notice:
+            IBGLog.logInfo(message)
         case .warning:
-            Instabug.logWarn(message)
+            IBGLog.logWarn(message)
+        case .error:
+            IBGLog.logError(message)
+        case .severe:
+            IBGLog.logError(message)
+        case .alert:
+            IBGLog.logError(message)
+        case .emergency:
+            IBGLog.logError(message)
         }
     }
 }
